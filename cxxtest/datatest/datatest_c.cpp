@@ -3,8 +3,8 @@
 
 using namespace std ;
 
-namespace cxxtest { 
-  namespace datatest { 
+namespace CxxTest { 
+  namespace DataTest { 
     extern "C" {
 //        void rate(DataTestDescription test_info, 
 //                  RATING_TYPE rating, const char *msg) 

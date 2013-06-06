@@ -1,7 +1,7 @@
 //#include "DataTestDescription.h"
 
-namespace cxxtest {
-  namespace datatest {
+namespace CxxTest {
+  namespace DataTest {
 
     typedef enum { 
         HIGH_Conf_Good,

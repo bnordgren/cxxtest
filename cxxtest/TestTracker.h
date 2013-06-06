@@ -96,6 +96,9 @@ public:
 
     void initialize();
 
+protected:
+    TestListener *_l;
+
 private:
     TestTracker(const TestTracker &);
     TestTracker &operator=(const TestTracker &);
@@ -105,7 +108,6 @@ private:
     DummyWorldDescription _dummyWorld;
     bool _testSkipped;
     unsigned _warnings, _skippedTests, _failedTests, _testFailedAsserts, _suiteFailedTests, _failedSuites;
-    TestListener *_l;
     const WorldDescription *_world;
     const SuiteDescription *_suite;
     const TestDescription *_test;
