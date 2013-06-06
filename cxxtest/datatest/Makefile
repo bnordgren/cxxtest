@@ -3,15 +3,18 @@ CXX=g++
 FORTRAN=gfortran
 
 FORTRAN_SRCS= \
-	datatest_f.f03
+	datatest_f.f03 \
+	Descriptions_f.f03
 FORTRAN_OBJS= $(FORTRAN_SRCS:.f03=.o)
+FFLAGS=-g
 
 CXX_SRCS = \
 	datatest_c.cpp \
 	DataTestSuite.cpp \
-	DataTestTracker.cpp
+	DataTestTracker.cpp \
+    FortranDataTestSuiteDescription.cpp
 CXX_OBJS = $(CXX_SRCS:.cpp=.o)
-CFLAGS=-I../..
+CFLAGS=-I../.. -g
 
 OBJS= $(FORTRAN_OBJS) $(CXX_OBJS)
 
@@ -21,8 +24,8 @@ LD_OPTS= -lgfortran
 	$(CXX) $(CFLAGS) -c -o $@ $<
 
 %.o : %.f03
-	$(FORTRAN) -c -o $@ $<
+	$(FORTRAN) $(FFLAGS) -c -o $@ $<
 
 all: $(OBJS)
 clean:
-	rm *.o *.mod
+	rm -f *.o *.mod

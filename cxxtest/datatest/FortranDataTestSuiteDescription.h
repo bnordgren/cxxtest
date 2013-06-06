@@ -1,4 +1,4 @@
-#include <cxxtest/datatest/RealDescriptions.h>
+#include <cxxtest/RealDescriptions.h>
 
 #ifndef __datatest__fortrandatatestsuitedesc__h
 #define __datatest__fortrandatatestsuitedesc__h
@@ -17,6 +17,12 @@ namespace CxxTest {
         const TestDescription *firstTest() const ; 
         void activateAllTests() ;
     };
+
+    inline unsigned
+    FortranDataTestSuiteDescription::numTests() const
+    {
+        return num_tests ;
+    }
 
   };
 };
