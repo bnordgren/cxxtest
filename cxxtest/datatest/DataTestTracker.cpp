@@ -1,7 +1,7 @@
-#include "DataTestTracker.h"
-#include "datatest.h"
-#include "DataTestDescription.h"
-#include "DataTestListener.h"
+#include <cxxtest/datatest/datatest.h>
+#include <cxxtest/datatest/DataTestTracker.h>
+#include <cxxtest/datatest/DataDescriptions.h>
+#include <cxxtest/datatest/DataTestListener.h>
 
 using namespace CxxTest ; 
 

@@ -1,4 +1,7 @@
-//#include "DataTestDescription.h"
+//#include <cxxtest/datatest/DataTestDescription.h>
+
+#ifndef __datatest__datatest__h
+#define __datatest__datatest__h
 
 namespace CxxTest {
   namespace DataTest {
@@ -22,3 +25,4 @@ namespace CxxTest {
 
   };
 };
+#endif
